@@ -25,7 +25,7 @@
     "descripcion": "Explorador interactivo de las 17 partículas del Modelo Estándar: universo 3D, simulaciones, quiz y glosario en español, inglés y euskera. Nació para responder las preguntas de mi hija.",
     "area": "ciencia",
     "tags": ["React", "TypeScript", "Three.js", "Vite"],
-    "url": "https://particulas-elementales.netlify.app/",
+    "url": "https://particulaselementales.netlify.app/",
     "repo": null,
     "estado": "activo"
   },
