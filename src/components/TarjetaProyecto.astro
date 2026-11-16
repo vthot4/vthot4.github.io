@@ -1,0 +1,30 @@
+---
+import { AREAS, type Proyecto } from '../lib/proyectos';
+
+interface Props { proyecto: Proyecto; numero: number }
+const { proyecto: p, numero } = Astro.props;
+const ep = String(numero).padStart(2, '0');
+const principal = p.url ?? p.repo!;
+---
+<article class="tarjeta" data-area={p.area}>
+  <header class="tarjeta-cab">
+    <span class="ep">EP.{ep}</span>
+    <span class="area">{AREAS[p.area]}</span>
+  </header>
+  <h3 class="tarjeta-titulo">
+    <a href={principal} target="_blank" rel="noopener" class="enlace-tarjeta">{p.titulo}</a>
+  </h3>
+  <p class="tarjeta-desc">{p.descripcion}</p>
+  <ul class="tags">
+    {p.tags.map((t) => <li>{t}</li>)}
+  </ul>
+  <footer class="tarjeta-pie">
+    <span class={`estado estado-${p.estado.replace(/\s/g, '-')}`}>{p.estado}</span>
+    <span class="acciones">
+      {p.url && <span class="abrir">Abrir ↗</span>}
+      {p.repo
+        ? <a href={p.repo} target="_blank" rel="noopener" class="codigo">Código</a>
+        : <span class="privado" title="Repositorio privado">repo privado</span>}
+    </span>
+  </footer>
+</article>

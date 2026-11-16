@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cuadernodecampo",
+    "titulo": "Codex Naturae",
+    "descripcion": "Cuaderno de campo con fichas de las especies que me encuentro por el camino: taxonomía, ecología, estado de conservación y notas propias.",
+    "area": "naturaleza",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "url": "https://vthot4.github.io/cuadernodecampo/",
+    "repo": "https://github.com/vthot4/cuadernodecampo",
+    "estado": "activo"
+  },
+  {
+    "id": "cuaderno-de-Inmersiones",
+    "titulo": "Cuaderno de inmersiones",
+    "descripcion": "Blog de buceo en el Cantábrico: inmersiones, zonas con mapa, fauna y flora.",
+    "area": "naturaleza",
+    "tags": ["Astro", "TypeScript", "Leaflet"],
+    "url": "https://vthot4.github.io/cuaderno-de-Inmersiones/",
+    "repo": "https://github.com/vthot4/cuaderno-de-Inmersiones",
+    "estado": "activo"
+  },
+  {
+    "id": "particulas-elementales",
+    "titulo": "Partículas elementales",
+    "descripcion": "Explorador interactivo de las 17 partículas del Modelo Estándar: universo 3D, simulaciones, quiz y glosario en español, inglés y euskera. Nació para responder las preguntas de mi hija.",
+    "area": "ciencia",
+    "tags": ["React", "TypeScript", "Three.js", "Vite"],
+    "url": "https://particulas-elementales.netlify.app/",
+    "repo": null,
+    "estado": "activo"
+  },
+  {
+    "id": "Formacion_R",
+    "titulo": "Formación en R",
+    "descripcion": "Libro con teoría y laboratorios de modelos estadísticos: de la probabilidad y la simulación a la regresión y los modelos lineales generalizados.",
+    "area": "datos",
+    "tags": ["R", "Quarto", "Estadística"],
+    "url": "https://vthot4.github.io/Formacion_R/",
+    "repo": "https://github.com/vthot4/Formacion_R",
+    "estado": "en construcción"
+  }
+]

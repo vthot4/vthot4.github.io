@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+import Orbita from '../components/Orbita.astro';
+import TarjetaProyecto from '../components/TarjetaProyecto.astro';
+import { AREAS, areasEnUso, proyectos, sitio } from '../lib/proyectos';
+
+const titulo = `${sitio.nombre} · ${sitio.rol}`;
+---
+<Base titulo={titulo} descripcion={sitio.intro}>
+  <a class="saltar" href="#proyectos">Ir a proyectos</a>
+
+  <header class="hero">
+    <div class="contenedor hero-grid">
+      <div class="hero-texto">
+        <p class="prompt"><span class="prompt-usr">{sitio.nombre}@proyectos</span><span class="prompt-sep">:~$</span> ls -1 | wc -l <span class="prompt-out">→ {proyectos.length}</span><span class="cursor" aria-hidden="true"></span></p>
+        <p class="rol">{sitio.rol}</p>
+        <h1>{sitio.titular}</h1>
+        <p class="intro">{sitio.intro}</p>
+        <ul class="intereses" aria-label="Intereses">
+          {sitio.intereses.map((i) => <li>{i}</li>)}
+        </ul>
+        <p class="hero-links">
+          <a class="btn btn-primario" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href={sitio.github} target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
+      </div>
+      <div class="hero-arte"><Orbita /></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="proyectos" class="contenedor seccion">
+      <div class="seccion-cab">
+        <h2><span class="num">01</span> Proyectos</h2>
+        <div class="filtros" role="group" aria-label="Filtrar por área">
+          <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos <span class="n">{proyectos.length}</span></button>
+          {areasEnUso.map((a) => (
+            <button type="button" class="filtro" data-filtro={a} data-area={a} aria-pressed="false">
+              {AREAS[a]} <span class="n">{proyectos.filter((p) => p.area === a).length}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="rejilla" id="rejilla">
+        {proyectos.map((p, i) => <TarjetaProyecto proyecto={p} numero={i + 1} />)}
+      </div>
+    </section>
+
+    <section class="contenedor seccion" id="oficio">
+      <div class="seccion-cab">
+        <h2><span class="num">02</span> Caja de herramientas</h2>
+      </div>
+      <div class="competencias">
+        {sitio.competencias.map((c) => (
+          <div class="comp">
+            <h3>{c.grupo}</h3>
+            <ul>{c.items.map((i) => <li>{i}</li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <span>© {new Date().getFullYear()} {sitio.nombre}</span>
+      <span class="pie-lema">観察 · 実験 · 構築 — observar, experimentar, construir</span>
+      <a href={sitio.github} target="_blank" rel="noopener">github.com/vthot4 ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    const botones = document.querySelectorAll<HTMLButtonElement>('.filtro');
+    const tarjetas = document.querySelectorAll<HTMLElement>('.tarjeta');
+    botones.forEach((b) =>
+      b.addEventListener('click', () => {
+        const f = b.dataset.filtro;
+        botones.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+        tarjetas.forEach((t) => { t.hidden = f !== 'todos' && t.dataset.area !== f; });
+      }),
+    );
+  </script>
+</Base>

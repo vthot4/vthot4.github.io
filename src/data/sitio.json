@@ -1,0 +1,13 @@
+{
+  "nombre": "vthot4",
+  "rol": "Cloud engineer",
+  "titular": "Infraestructura en la nube, curiosidad en todo lo demás.",
+  "intro": "Más de 20 años diseñando y operando sistemas. Aquí guardo lo que construyo por gusto: ciencia, naturaleza, datos y alguna obsesión friki.",
+  "intereses": ["Ciencia", "Anime", "Buceo", "Naturaleza", "Física de partículas"],
+  "competencias": [
+    { "grupo": "Plataforma", "items": ["Kubernetes", "GitOps", "ArgoCD"] },
+    { "grupo": "Infraestructura como código", "items": ["Terraform", "Spacelift", "CI/CD"] },
+    { "grupo": "Fuera de horario", "items": ["Astro", "React", "Three.js", "R · Quarto"] }
+  ],
+  "github": "https://github.com/vthot4"
+}
