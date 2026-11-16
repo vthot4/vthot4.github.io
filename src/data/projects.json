@@ -30,6 +30,16 @@
     "estado": "activo"
   },
   {
+    "id": "Quantum_Computing_notes",
+    "titulo": "Notas de computación cuántica",
+    "descripcion": "Cuadernos de Jupyter y apuntes para aprender computación cuántica con Qiskit: números complejos, álgebra lineal, esfera de Bloch y los algoritmos de Deutsch, Grover y Simon.",
+    "area": "ciencia",
+    "tags": ["Python", "Qiskit", "Jupyter", "Quarto"],
+    "url": "https://vthot4.github.io/Quantum_Computing_notes/",
+    "repo": "https://github.com/vthot4/Quantum_Computing_notes",
+    "estado": "en construcción"
+  },
+  {
     "id": "Formacion_R",
     "titulo": "Formación en R",
     "descripcion": "Libro con teoría y laboratorios de modelos estadísticos: de la probabilidad y la simulación a la regresión y los modelos lineales generalizados.",
