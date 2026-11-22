@@ -48,5 +48,15 @@
     "url": "https://vthot4.github.io/Formacion_R/",
     "repo": "https://github.com/vthot4/Formacion_R",
     "estado": "en construcción"
+  },
+  {
+    "id": "diario-de-un-aprendiz",
+    "titulo": "Diario de un aprendiz",
+    "descripcion": "Blog personal: notas de alguien que sigue aprendiendo sobre ciencia, informática y filosofía.",
+    "area": "ciencia",
+    "tags": ["Astro", "TypeScript", "KaTeX"],
+    "url": "https://vthot4.github.io/diario-de-un-aprendiz/",
+    "repo": "https://github.com/vthot4/diario-de-un-aprendiz",
+    "estado": "en construcción"
   }
 ]

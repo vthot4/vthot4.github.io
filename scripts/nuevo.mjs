@@ -83,7 +83,9 @@ lista.push({
   repo: repoUrl,
   estado: v.estado,
 });
-writeFileSync(jsonPath, JSON.stringify(lista, null, 2) + '\n');
+// Arrays de valores simples (tags) en una línea, como en el JSON escrito a mano.
+const json = JSON.stringify(lista, null, 2).replace(/\[\n\s+([^[\]{}]*?)\n\s+\]/g, (_, items) => `[${items.replace(/,\n\s+/g, ', ')}]`);
+writeFileSync(jsonPath, json + '\n');
 
 console.log(`\n✓ ${nombre} creado y añadido a src/data/projects.json`);
 console.log('  Para publicarlo en el portfolio: git add -A && git commit -m "Añade ' + nombre + '" && git push');
