@@ -58,5 +58,15 @@
     "url": "https://vthot4.github.io/diario-de-un-aprendiz/",
     "repo": "https://github.com/vthot4/diario-de-un-aprendiz",
     "estado": "en construcción"
+  },
+  {
+    "id": "ai-hub",
+    "titulo": "AI Hub",
+    "descripcion": "Centro interno de IA para una organización: herramientas permitidas, normas, catálogo de agentes con guías de instalación, flujos, biblioteca compartida y un tablón de retos. Astro, SQLite y Docker (requiere servidor, sin demo en línea).",
+    "area": "nube",
+    "tags": ["Astro", "TypeScript", "SQLite", "Docker"],
+    "url": null,
+    "repo": "https://github.com/vthot4/ai-hub",
+    "estado": "activo"
   }
 ]
