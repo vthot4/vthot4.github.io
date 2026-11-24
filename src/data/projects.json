@@ -62,10 +62,10 @@
   {
     "id": "ai-hub",
     "titulo": "AI Hub",
-    "descripcion": "Centro interno de IA para una organización: herramientas permitidas, normas, catálogo de agentes con guías de instalación, flujos, biblioteca compartida y un tablón de retos. Astro, SQLite y Docker (requiere servidor, sin demo en línea).",
+    "descripcion": "Centro interno de IA para una organización: herramientas permitidas, normas, catálogo de agentes con guías de instalación, flujos, biblioteca compartida y un tablón de retos. Astro, SQLite y Docker. La demo en línea es estática y de solo lectura; la app completa requiere servidor.",
     "area": "nube",
     "tags": ["Astro", "TypeScript", "SQLite", "Docker"],
-    "url": null,
+    "url": "https://ai-hub-demo.netlify.app/",
     "repo": "https://github.com/vthot4/ai-hub",
     "estado": "activo"
   }
